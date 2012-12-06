@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="parent" class="fandi.spring.di.Parent">
+        <constructor-arg ref="item1" />
+        <constructor-arg ref="item2" />
+    </bean>
+    
+    <bean id="item1" class="fandi.spring.di.Item1"/>
+    <bean id="item2" class="fandi.spring.di.Item2"/>
+    
+</beans>

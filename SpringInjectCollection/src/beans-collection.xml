@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id="javaCollection" class="fandi.spring.collection.JavaCollection">
+        <!-- Results in setAddressList(java.util.List) call -->
+        <property name="addressList">
+            <list>
+                <value>Jakarta</value>
+                <value>Bandung</value>
+                <value>Yogyakarta</value>
+                <value>Surabaya</value>
+                <value>Surabaya</value>
+            </list>
+        </property>
+        
+        <!-- Results in setAddressSet(java.util.Set) call -->
+        <property name="addressSet">
+            <set>
+                <value>Jakarta</value>
+                <value>Bandung</value>
+                <value>Yogyakarta</value>
+                <value>Surabaya</value>
+                <value>Surabaya</value>
+            </set>
+        </property>
+        
+        <!-- Results in setAddressMap(java.util.Map) call -->
+        <property name="addressMap">
+            <map>
+                <entry key="1" value="Jakarta" />
+                <entry key="2" value="Bandung" />
+                <entry key="3" value="Yogyakarta" />   
+                <entry key="4" value="Surabaya" /> 
+            </map>
+        </property>
+        
+        <!-- Results in setAddressProp(java.util.Properties) call -->
+        <property name="addressProp">
+            <props>
+                <prop key="one">Jakarta</prop>
+                <prop key="two">Bandung</prop>
+                <prop key="three">Yogyakarta</prop>
+                <prop key="four">Surabaya</prop>
+            </props>
+        </property>
+    </bean>
+    
+</beans>
